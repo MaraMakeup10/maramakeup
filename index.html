@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mara Makeup - Tienda de maquillaje</title>
+
+  <!-- Íconos de Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  
+ <!-- Fuente Poetsen+One de Google fonts-->
+  <link href="https://fonts.google.com/specimen/Lora" rel="stylesheet">
+
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <i class="fa-regular fa-user" title="Mi cuenta"></i>
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="BUSCAR PRODUCTOS" />
+      </div>
+    </div>
+
+    <div class="center-header">
+      <img src="https://i.ibb.co/60XrJqLg/2.png" alt="Mara Makeup Logo" />
+    </div>
+
+    <div class="right-header">
+      <button class="btn btn-acceso">Acceso</button>
+      <button class="btn btn-registro">Registro</button>
+      <div class="cart-container" title="Carrito de compras">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="cart-count">0</div>
+      </div>
+    </div>
+
+    
+  </header>
+
+  
+  <section class="categorias">
+  <div class="titulo-categorias">
+    <hr>
+    <h2>CATEGORÍAS</h2>
+    <hr>
+  </div>
+  <div class="categoria-contenedor">
+    <div class="categoria-item" id="categoriaMaquillaje">
+      <img src="https://i.ibb.co/hJs3b4zZ/maquillaje.png" alt="Maquillaje" />
+      <p>Maquillaje</p>
+    </div>
+    <div class="categoria-item" id="categoriaCuidadoDePiel"> 
+      <img src="https://i.ibb.co/spk1rSLq/cuidado-de-piel.png" alt="Cuidado de la Piel" />
+      <p>Cuidado de la Piel</p>
+    </div>  
+    <div class="categoria-item" id="categoriaBrochasEsponjas">
+      <img src="https://i.ibb.co/M52jQ76w/brochas-y-esponjas.png" alt="Brochas y Esponjas" />
+      <p>Brochas y Esponjas</p>
+    </div>
+    <div class="categoria-item" id="categoriaAccesorios">
+      <img src="https://i.ibb.co/wZHh3xW0/accesorios.png" alt="Accesorios" />
+      <p>Accesorios</p>
+    </div>
+    <div class="categoria-item" id="categoriaCapilar">
+      <img src="https://i.ibb.co/xq4L6Jmk/capilar.png" alt="Capilar" />
+      <p>Capilar</p>
+    </div>
+  </div>
+</section>
+<!-- Sección de Subcategorías de Maquillaje -->
+<section id="subcategoriasMaquillaje" class="subcategorias-maquillaje" style="display: none;">
+  <div class="titulo-subcategorias">
+    <hr>
+    <h2>MAQUILLAJE</h2>
+    <hr>
+  </div>
+  <div class="subcategoria-contenedor">
+    <div class="subcategoria-item" data-subcategoria="cejas">
+      <img src="https://i.ibb.co/4Z3vPxLB/cejas.png" alt="Cejas" />
+      <p>Cejas</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="labios">
+      <img src="https://i.ibb.co/MDTkSkNY/Gemini-Generated-Image-d3u93kd3u93kd3u9.png" alt="Labios" />
+      <p>Labios</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="ojos">
+      <img src="https://i.ibb.co/HDG7Z1dB/ojos.png" alt="Ojos" />
+      <p>Ojos</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="rostro">
+      <img src="https://i.ibb.co/G4zqkNkB/rostro.png" alt="Rostro" />
+      <p>Rostro</p>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="btnVolverCategorias" class="btn">Volver a Categorías</button>
+  </div>
+</section>
+<!-- Sección de Subcategorías de Cuidado de la Piel -->
+<section id="subcategoriasCuidadoDePiel" class="subcategorias-maquillaje" style="display: none;">
+  <div class="titulo-subcategorias">
+    <hr>
+    <h2>CUIDADO DE LA PIEL</h2>
+    <hr>
+  </div>
+  <div class="subcategoria-contenedor">
+    <div class="subcategoria-item" data-subcategoria="cuidado-facial">
+      <img src="https://i.ibb.co/RGx8zFWB/cuidado-de-piel-2.png" alt="Cuidado Facial" />
+      <p>Cuidado Facial</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="cuidado-corporal">
+      <img src="https://i.ibb.co/wF6LsKQv/corporal-1.png" alt="Cuidado Corporal" />
+      <p>Cuidado Corporal</p>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="btnVolverCategoriasDesdeCuidadoPiel" class="btn">Volver a Categorías</button>
+  </div>
+</section>
+
+<!-- Sección de Subcategorías de Brochas y Esponjas -->
+<section id="subcategoriasBrochasEsponjas" class="subcategorias-maquillaje" style="display: none;">
+  <div class="titulo-subcategorias">
+    <hr>
+    <h2>BROCHAS Y ESPONJAS</h2>
+    <hr>
+  </div>
+  <div class="subcategoria-contenedor">
+    <div class="subcategoria-item" data-subcategoria="brochas-individuales">
+      <img src="https://i.ibb.co/Tx4DFn2X/brocha-individual.png" alt="Brochas Individuales" />
+      <p>Brochas Individuales</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="kit-de-brochas">
+      <img src="https://i.ibb.co/bj40qbSN/kit-de-brochas.png" alt="Kit de Brochas" />
+      <p>Kit de Brochas</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="esponjas">
+      <img src="https://i.ibb.co/9kCnTgn8/esponjas.png" alt="Esponjas" />
+      <p>Esponjas</p>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="btnVolverCategoriasDesdeBrochas" class="btn">Volver a Categorías</button>
+  </div>
+</section>
+
+<!-- Sección de Subcategorías de Accesorios -->
+<section id="subcategoriasAccesorios" class="subcategorias-maquillaje" style="display: none;">
+  <div class="titulo-subcategorias">
+    <hr>
+    <h2>ACCESORIOS</h2>
+    <hr>
+  </div>
+  <div class="subcategoria-contenedor">
+    <div class="subcategoria-item" data-subcategoria="cosmetiqueras">
+      <img src="https://i.ibb.co/gFzbXCyj/cosmetiqueras.png" alt="Cosmetiqueras" />
+      <p>Cosmetiqueras</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="espejos">
+      <img src="https://i.ibb.co/HDM1x0vG/espejos.png" alt="Espejos" />
+      <p>Espejos</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="pestanas">
+      <img src="https://i.ibb.co/fY2MnMMZ/PESTA-AS.png" alt="Pestañas" />
+      <p>Pestañas</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="otros-accesorios">
+      <img src="https://i.ibb.co/27jwn7d3/otros-accesorios.png" alt="Otros Accesorios" />
+      <p>Otros Accesorios</p>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="btnVolverCategoriasDesdeAccesorios" class="btn">Volver a Categorías</button>
+  </div>
+</section>
+
+<!-- Sección de Subcategorías de Capilar  -->
+<section id="subcategoriasCapilar" class="subcategorias-maquillaje" style="display: none;">
+  <div class="titulo-subcategorias">
+    <hr>
+    <h2>CAPILAR</h2>
+    <hr>
+  </div>
+  <div class="subcategoria-contenedor">
+    <div class="subcategoria-item" data-subcategoria="kaba">
+      <img src="https://i.ibb.co/jvCv6m51/kaba2.webp" alt="Kaba" />
+      <p>Kaba</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="ritual-botanico">
+      <img src="https://i.ibb.co/TBH5MxQJ/ritual-botanico.jpg" alt="Ritual Botanico" />
+      <p>Ritual Botanico</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="mandarinna">
+      <img src="https://i.ibb.co/hxHBTpMm/mandarinna.png" alt="Mandarinna" />
+      <p>Mandarinna</p>
+    </div>
+    <div class="subcategoria-item" data-subcategoria="milagros">
+      <img src="https://i.ibb.co/VWWgnmmp/milagros.jpg" alt="Milagros" />
+      <p>Milagros</p>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="btnVolverCategoriasDesdeCapilar" class="btn">Volver a Categorías</button>
+  </div>
+</section>
+
+
+
+<!-- PRODUCTOS DESTACADOS -->
+<section class="productos-destacados">
+  <div class="productos-destacados-titulo">
+    <hr>
+    <h2>PRODUCTOS DESTACADOS</h2>
+    <hr>
+  </div>
+
+  <div class="productos-destacados-contenedor">
+    <!-- Producto 1 -->
+    <div class="producto-item" data-nombre="Pestañina Prosa" data-precio="25000">
+      <img src="https://i.ibb.co/2765QTwz/pesta-ina.webp" alt="PESTAÑINA PROSA">
+      <p><strong>Pestañina Prosa</strong></p>
+      <p>$25.000 COP</p>
+      <button class="btn btn-anadir-carrito">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="producto-item" data-nombre="Corrector Bloomshell" data-precio="20000">
+      <img src="https://i.ibb.co/ynGF4s1b/CORRECTOR-BLOOMSHELL.webp" alt="CORRECTOR BLOOMSHELL">
+      <p><strong>Corrector Bloomshell</strong></p>
+      <p>$20.000 COP</p>
+      <button class="btn btn-anadir-carrito">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="producto-item" data-nombre="Gloss Ani-k" data-precio="20000">
+      <img src="https://i.ibb.co/sd5S22dZ/GLOSS-ANI-K.webp" alt="GLOSS GLOSS-ANI-K">
+      <p><strong>Gloss Ani-k </strong></p>
+      <p>$20.000 COP</p>
+      <button class="btn btn-anadir-carrito">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="producto-item" data-nombre="Polvo Suelto Soft-Powder Montoc Mini" data-precio="30000">
+      <img src="https://i.ibb.co/7d5jSRb3/Polvo-traslucido-peque-o-montoc.webp" alt="POLVO TRASLUCIDO PEQ MONTOC">
+      <p><strong> Polvo Suelto Soft-Powder Montoc Mini </strong></p>
+      <p>$30.000 COP</p>
+      <button class="btn btn-anadir-carrito">Añadir al carrito</button>
+    </div>
+
+    <!-- Producto 5 -->
+    <div class="producto-item" data-nombre="Iluminador Suelto Ani-k" data-precio="22000">
+      <img src="https://i.ibb.co/FLz5yn7S/ILUMINADOR-SUELTO-ANI-K.webp" alt="ILUMINADOR SUELTO ANI-K">
+      <p><strong>Iluminador Suelto Ani-k </strong></p>
+      <p>$22.000 COP</p>
+      <button class="btn btn-anadir-carrito">Añadir al carrito</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Modal de Acceso -->
+  <div id="modalAcceso" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar-modal" data-modal-id="modalAcceso">&times;</span>
+      <h2>Iniciar Sesión</h2>
+      <form id="formAcceso">
+        <label for="emailAcceso">Correo Electrónico:</label>
+        <input type="email" id="emailAcceso" name="emailAcceso" required>
+        <label for="passAcceso">Contraseña:</label>
+        <input type="password" id="passAcceso" name="passAcceso" required>
+        <button type="submit" class="btn">Acceder</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Registro -->
+  <div id="modalRegistro" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar-modal" data-modal-id="modalRegistro">&times;</span>
+      <h2>Crear Cuenta</h2>
+      <form id="formRegistro" method="POST" action="registro.php">
+        <label for="nombreRegistro">Nombre Completo:</label>
+        <input type="text" id="nombreRegistro" name="nombreRegistro" required>
+        <label for="emailRegistro">Correo Electrónico:</label>
+        <input type="email" id="emailRegistro" name="emailRegistro" required>
+        <label for="passRegistro">Contraseña:</label>
+        <input type="password" id="passRegistro" name="passRegistro" required>
+        <label for="confirmPassRegistro">Confirmar Contraseña:</label>
+        <input type="password" id="confirmPassRegistro" name="confirmPassRegistro" required>
+        <button type="submit" class="btn">Registrarse</button>
+      </form>
+    </div>
+    </div>
+    
+    <!-- Modal del Carrito de Compras -->
+    <div id="modalCarrito" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar-modal" data-modal-id="modalCarrito">&times;</span>
+        <h2>Mi Carrito de Compras</h2>
+        <div id="carritoContenido" class="carrito-contenido-items">
+          <!-- Los productos del carrito se insertarán aquí por JavaScript -->
+          <p class="carrito-vacio-mensaje">Tu carrito está vacío.</p>
+        </div>
+        <div class="carrito-total">
+          <strong>Total:</strong> <span id="carritoTotalPrecio">$0 COP</span>
+        </div>
+        <button id="btnPagar" class="btn btn-pagar" style="margin-top: 20px;">Pagar</button>
+      </div>
+    </div>
+    <script src="modales.js"></script>
+
+</body>

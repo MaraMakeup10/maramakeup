@@ -1,0 +1,567 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffe6f0;
+}
+
+header {
+  background-color: #FFEEF8;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f2c2d4;
+  flex-wrap: wrap;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.left-header i.fa-user {
+  font-size: 24px;
+  color: #d76b9a;
+  cursor: pointer;
+}
+
+.search-container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-container i.fa-magnifying-glass {
+  color: #d76b9a;
+  font-size: 16px;
+  pointer-events: none;
+  order: 0;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 6px 10px;
+  border: none;
+  border-bottom: 2px solid #d76b9a;
+  background: transparent;
+  font-size: 14px;
+  color: #4a2b3b;
+  outline: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  order: 1;
+}
+
+.search-container input::placeholder {
+  color: #b0849f;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.center-header {
+  flex: 0 1 auto;
+  text-align: center;
+}
+
+.center-header img {
+  max-height: 150px;
+  max-width: 150%;
+  cursor: pointer;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1 1 250px;
+  justify-content: flex-end;
+  min-width: 200px;
+}
+
+.btn {
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-acceso {
+  background-color: #ff8fba;
+  color: white;
+}
+
+.btn-acceso:hover {
+  background-color: #e773a3;
+}
+
+.btn-registro {
+  background-color: #603441;
+  color: white;
+}
+
+.btn-registro:hover {
+  background-color: #4a2b33;
+}
+
+.cart-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-container i.fa-cart-shopping {
+  font-size: 26px;
+  color: #d76b9a;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #52c0a9;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+/*Estilo para categorías */
+
+.titulo-categorias {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffe6f0;
+  margin-top: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+.titulo-categorias h2 {
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Lora", serif;
+  color: #e52e78;
+  margin-bottom: 30px;
+}
+
+
+.titulo-categorias hr{
+  flex: 1;
+  height: 2px;
+  background-color: #e52e78; 
+  border: none;
+}
+.categoria-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.categoria-item {
+  text-align: center;
+  width: 120px;
+}
+
+.categoria-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 20%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.categoria-item img:hover {
+  transform: scale(1.05);
+}
+
+.categoria-item p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  header {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .left-header,
+  .right-header {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .search-container {
+    max-width: 150px;
+  }
+  
+  
+  
+}
+
+/* Estilos para Productos Destacados */
+.productos-destacados {
+  background-color: #ffe6f0;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.productos-destacados-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px; /* Espacio antes de la lista de productos */
+}
+
+.productos-destacados-titulo hr {
+  flex: 1;
+  border: 1px solid #e91e63;
+  margin: 0 20px;
+}
+
+.productos-destacados-titulo h2 {
+  margin: 0;
+  font-size: 30px;
+  color: #e91e63;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+}
+
+.productos-destacados-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 40px 40px 40px; /* Ajustado para no duplicar el padding superior de la sección */
+}
+
+.producto-item {
+  width: 200px;
+  text-align: center;
+}
+
+.producto-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px; /* Espacio entre imagen y texto */
+}
+
+.producto-item p {
+  margin: 5px 0; /* Espacio entre los párrafos de nombre y precio */
+  color: #333; /* Color de texto general para los productos */
+}
+
+.producto-item p strong {
+  color: #e91e63; /* Color para el nombre del producto, si se desea destacar */
+}
+
+/* Estilos para Modales */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Se queda en el lugar incluso al hacer scroll */
+  z-index: 1000; /* Se asegura que esté sobre otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Habilita scroll si el contenido es muy largo */
+  background-color: rgba(0,0,0,0.6); /* Fondo oscuro semitransparente */
+  padding-top: 60px; /* Espacio para que no quede pegado al borde superior */
+}
+
+.modal-contenido {
+  background-color: #fefefe;
+  margin: 5% auto; /* 5% desde arriba/abajo y centrado horizontalmente */
+  padding: 30px;
+  border: 1px solid #888;
+  width: 80%; /* Podría ser un valor fijo como 400px */
+  max-width: 450px; /* Ancho máximo */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+  animation: aparecer 0.3s ease-out;
+}
+
+@keyframes aparecer {
+  from {transform: scale(0.9); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+.cerrar-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+  color: #e52e78; /* Color principal para hover */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-contenido h2 {
+  text-align: center;
+  color: #e52e78; /* Color principal */
+  margin-bottom: 25px;
+  font-family: "Lora", serif;
+}
+
+.modal-contenido form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #603441; /* Color oscuro para texto */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.modal-contenido form input[type="text"],
+.modal-contenido form input[type="email"],
+.modal-contenido form input[type="password"] {
+  width: calc(100% - 22px); /* Ajuste para padding y borde */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Incluye padding y borde en el width/height total */
+  font-size: 14px;
+}
+
+.modal-contenido form input[type="text"]:focus,
+.modal-contenido form input[type="email"]:focus,
+.modal-contenido form input[type="password"]:focus {
+  border-color: #e52e78;
+  outline: none;
+  box-shadow: 0 0 5px rgba(229, 46, 120, 0.3);
+}
+
+.modal-contenido form button.btn {
+  background-color: #e52e78;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.modal-contenido form button.btn:hover {
+  background-color: #d41c68; /* Un tono más oscuro para hover */
+}
+
+/* Estilos para botones "Añadir al carrito" */
+.btn-anadir-carrito {
+  background-color: #52c0a9; /* Verde menta, similar al contador del carrito */
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px; /* Bordes redondeados como otros botones */
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10px; /* Espacio sobre el botón */
+  transition: background-color 0.3s ease;
+  display: block; /* Para que ocupe el ancho disponible si es necesario */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-anadir-carrito:hover {
+  background-color: #43a08b; /* Tono más oscuro para hover */
+}
+
+/* Estilos para el Modal del Carrito */
+.carrito-contenido-items {
+  max-height: 300px; /* Altura máxima antes de hacer scroll */
+  overflow-y: auto; /* Scroll vertical si hay muchos items */
+  margin-bottom: 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  border-bottom: 1px dotted #eee;
+}
+
+.carrito-item:last-child {
+  border-bottom: none;
+}
+
+.carrito-item-nombre {
+  flex-grow: 1;
+  font-size: 15px;
+  color: #333;
+}
+
+.carrito-item-precio {
+  font-weight: bold;
+  color: #e52e78;
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+.carrito-item-cantidad {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.carrito-item-controles button {
+  background: none;
+  border: 1px solid #ddd;
+  color: #777;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin: 0 2px;
+}
+.carrito-item-controles button:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+
+.carrito-vacio-mensaje {
+  text-align: center;
+  color: #777;
+  padding: 20px 0;
+  font-style: italic;
+}
+
+.carrito-total {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+}
+
+.carrito-total span {
+  color: #e52e78; /* Color principal para el precio total */
+}
+
+.btn-pagar {
+  background-color: #e52e78; /* Color principal */
+}
+
+.btn-pagar:hover {
+  background-color: #d41c68; /* Tono más oscuro */
+}
+
+/* Estilos para Subcategorías de Maquillaje */
+
+.subcategorias-maquillaje {
+  padding: 20px 0; /* Espaciado similar a otras secciones */
+  background-color: #ffe6f0; /* Mismo fondo que categorías y productos destacados */
+  /* display: none; ya está inline en el HTML, pero podría estar aquí también */
+}
+
+.titulo-subcategorias {
+  text-align: center;
+  padding: 20px 20px 30px 20px; /* Ajustar padding si es necesario */
+  background-color: #ffe6f0; /* Coherencia */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px; /* Espacio antes del contenedor de subcategorías */
+}
+
+.titulo-subcategorias h2 {
+  font-size: 30px; /* Igual que .titulo-categorias h2 */
+  font-weight: 900;
+  font-family: "Lora", serif;
+  color: #e52e78;
+  margin: 0; /* Quitar margen por defecto del h2 */
+}
+
+.titulo-subcategorias hr {
+  flex: 1;
+  height: 2px;
+  background-color: #e52e78; 
+  border: none;
+}
+
+.subcategoria-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Espacio entre ítems, igual que .categoria-contenedor */
+  padding: 0 20px; /* Padding lateral */
+}
+
+.subcategoria-item {
+  text-align: center;
+  width: 120px; /* Igual que .categoria-item */
+  cursor: pointer; /* Para indicar que son clickables */
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.subcategoria-item:hover {
+  background-color: #fddde8; /* Un rosa más claro al pasar el mouse */
+  transform: translateY(-5px); /* Ligero efecto de elevación */
+}
+
+.subcategoria-item img {
+  width: 100px; /* Ligeramente más pequeño o igual que .categoria-item img */
+  height: 100px;
+  border-radius: 50%; /* Círculos como en la imagen de ejemplo */
+  object-fit: cover;
+  border: 3px solid white; /* Borde blanco */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  margin-bottom: 10px;
+}
+
+.subcategoria-item p {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 16px; /* Igual que .categoria-item p */
+  color: #333;
+}
+
+#btnVolverCategorias {
+  background-color: #603441; /* Color oscuro, similar a btn-registro */
+  color: white;
+  /* Hereda estilos de .btn, pero se pueden añadir específicos si es necesario */
+}
+
+#btnVolverCategorias:hover {
+  background-color: #4a2b33; /* Más oscuro al pasar el mouse */
+}
+
+/* Estilos para Modales */
